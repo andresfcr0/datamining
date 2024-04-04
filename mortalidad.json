@@ -1,5 +1,5 @@
 {
-  "1": [
+  "difunto": [
     {
       "edadmintervencion": 60,
       "sexopte": 1,
@@ -136,7 +136,7 @@
       "tipodeabordajecx": 1
     }
   ],
-  "0": [
+  "vivo": [
     {
       "edadmintervencion": 82,
       "sexopte": 0,
