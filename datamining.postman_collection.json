@@ -1,0 +1,34 @@
+{
+	"info": {
+		"_postman_id": "73ef4994-6e71-4648-b9c3-2ad5441f898b",
+		"name": "datamining",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13843595"
+	},
+	"item": [
+		{
+			"name": "POST Mortalidad",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"edadmintervencion\": 60,\r\n    \"sexopte\": 1,\r\n    \"tabaquismo\": 0,\r\n    \"mtabaco\": 0,\r\n    \"imc\": 26.1,\r\n    \"hta\": 0,\r\n    \"arritmiacard\": 0,\r\n    \"erc\": 0,\r\n    \"fallacardcron\": 0,\r\n    \"dislipidemia\": 0,\r\n    \"dm\": 0,\r\n    \"epoc\": 0,\r\n    \"transtiroideo\": 0,\r\n    \"diagcovid19\": 0,\r\n    \"covid19menor2\": 0,\r\n    \"esquemavacu\": 0,\r\n    \"estratosocioecono\": 2,\r\n    \"afiliacionsistema\": 2,\r\n    \"asascore\": 4,\r\n    \"complejidadprocedimiento\": 2,\r\n    \"momntointerven\": 0,\r\n    \"inestabilidadhemodinamica\": 1,\r\n    \"parocardiacopreoperatorio\": 0,\r\n    \"tipocx\": 2801,\r\n    \"tipodeabordajecx\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000",
+					"host": [
+						"localhost"
+					],
+					"port": "5000"
+				}
+			},
+			"response": []
+		}
+	]
+}
