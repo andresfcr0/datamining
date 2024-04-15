@@ -1,0 +1,30 @@
+{
+  "min_attributes": ["user_id", "attr"],
+  "mortalidad": [
+    "edadmintervencion",
+    "sexopte",
+    "tabaquismo",
+    "mtabaco",
+    "imc",
+    "hta",
+    "arritmiacard",
+    "erc",
+    "fallacardcron",
+    "dislipidemia",
+    "dm",
+    "epoc",
+    "transtiroideo",
+    "diagcovid19",
+    "covid19menor2",
+    "esquemavacu",
+    "estratosocioecono",
+    "afiliacionsistema",
+    "asascore",
+    "complejidadprocedimiento",
+    "momntointerven",
+    "inestabilidadhemodinamica",
+    "parocardiacopreoperatorio",
+    "tipocx",
+    "tipodeabordajecx"
+  ]
+}
