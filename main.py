@@ -1,6 +1,6 @@
 import json
 from flask import Flask, Response, request
-from test import mortality_risk
+from functions import mortality_risk
 
 app = Flask(__name__)
 
