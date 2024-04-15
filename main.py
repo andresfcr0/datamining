@@ -19,7 +19,7 @@ def hello_world():
         dao = DAO()
 
         res = {
-            "message": "Prediction calculated successfully",
+            "message": "Predicción calculada con éxito",
             "mortality": "Alto Riesgo" if proba > 0.6 else "Bajo Riesgo",
             "probability": f"{proba * 100:.2f} %",
         }
@@ -37,8 +37,8 @@ def hello_world():
         ]
         return json_response(
             {
-                "message": "Incomplete params",
-                "details": "Request body does not fit the requirements",
+                "message": "Parámetros incompletos",
+                "details": "El cuerpo de la petición no cumple con los requisitos mínimos",
                 "params_missing": [x for x in missing if x is not False][0],
             },
             409,
