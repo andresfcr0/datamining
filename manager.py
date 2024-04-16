@@ -53,9 +53,24 @@ class DAO:
                 '{uuid4()}', 
                 '{user_id}',
                 '{json.dumps(json_obj)}',
-                '{datetime.datetime.now()}'
+                '2024-03-01 16:22:22.082264'
             )
             """
+            #'{datetime.datetime.now()}'
         )
 
         self.connection.commit()
+
+    def selectCalculations(self):
+        self.cursor.execute(
+            f"""
+            SELECT * FROM calculations
+            WHERE CAST ((
+                JulianDay('now') - JulianDay(date)
+            ) As Integer) > 30
+            """
+        )
+
+        return self.cursor.fetchall()
+        # for row in rows:
+        #     print(row)

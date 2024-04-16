@@ -18,6 +18,21 @@ cd ..
 pip install -r requirements.txt
 ```
 
+Para inicializar la BD, es necesario correr los siguentes comandos en la terminal de Python.
+
+En la raíz del proyecto:
+```
+python
+```
+
+Ejecutamos: 
+```
+from manager import DAO
+dao = DAO()
+dao.createTables()
+quit()
+```
+
 Una vez instalado, corremos el servidor:
 ```
 flask --app main run

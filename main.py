@@ -1,6 +1,6 @@
 import json
 from flask import Flask, Response, request
-from functions import mortality_risk
+from functions import mortality_risk, outcome_calculation
 
 app = Flask(__name__)
 
@@ -12,9 +12,9 @@ def mortality():
     return json_response(mort["response"], mort["status"])
 
 
-# @app.route("/", methods=["POST"])
-# def mortality_risk():
-#     return 0
+@app.route("/", methods=["GET"])
+def pending_outcomes():
+    return json_response(outcome_calculation(), 200)
 
 
 def json_response(json_obj, status):

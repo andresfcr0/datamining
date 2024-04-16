@@ -8,11 +8,10 @@ def mortality_risk(json_req):
         clf_xgb = pickle.load(open("model.pkl", "rb"))
 
         proba = predict(json_req["attr"], dict["mortalidad"], clf_xgb)
-
         dao = DAO()
 
         res = {
-            "message": "Predicción calculada con éxito",
+            "message": "Prediccion calculada con exito",
             "mortality": "Alto Riesgo" if proba > 0.6 else "Bajo Riesgo",
             "probability": f"{proba * 100:.2f} %",
         }
@@ -30,16 +29,22 @@ def mortality_risk(json_req):
         ]
         return {
             "response": {
-                "message": "Parámetros incompletos",
-                "details": "El cuerpo de la petición no cumple con los requisitos mínimos",
+                "message": "Parametros incompletos",
+                "details": "El cuerpo de la peticion no cumple con los requisitos minimos",
                 "params_missing": [x for x in missing if x is not False][0],
             },
             "status": 409,
         }
 
 
-def mortality_risk():
-    return 0
+def outcome_calculation():
+    dao = DAO()
+    rows = dao.selectCalculations()
+    values = []
+    for i in rows:
+        values.append({"user_id": i[0], "model_result": json.loads(i[2]), "date": i[3]})
+
+    return values
 
 
 def predict(params, dict, model):
