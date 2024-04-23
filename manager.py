@@ -56,7 +56,7 @@ class DAO:
                 '2024-03-01 16:22:22.082264'
             )
             """
-            #'{datetime.datetime.now()}'
+            # '{datetime.datetime.now()}'
         )
 
         self.connection.commit()
@@ -72,5 +72,3 @@ class DAO:
         )
 
         return self.cursor.fetchall()
-        # for row in rows:
-        #     print(row)
