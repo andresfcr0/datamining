@@ -27,6 +27,40 @@ https://c03pz1fzie.execute-api.us-east-1.amazonaws.com/dev/apiresource
 - `user_id` (string): ID del usuario.
 - `attr` (object): Un objeto con los atributos para realizar el calculo asignado.
 
+### Atributo ```attr```
+
+Este atributo debe tener los parámetros necesarios para el cálculo:
+
+```
+{
+    edadmintervencion: integer(5-100)
+    sexopte: boolean
+    tabaquismo: boolean
+    mtabaco: boolean
+    imc: decimal
+    hta: boolean
+    arritmiacard: boolean
+    erc: boolean
+    fallacardcron: boolean
+    dislipidemia: boolean
+    dm: boolean
+    epoc: boolean
+    transtiroideo: boolean
+    diagcovid19: boolean
+    covid19menor2: boolean
+    esquemavacu: boolean
+    estratosocioecono: integer(1-7)
+    afiliacionsistema: integer(1-7)
+    asascore: integer(1-5)
+    complejidadprocedimiento: integer(1-7)
+    momntointerven: boolean
+    inestabilidadhemodinamica: boolean
+    parocardiacopreoperatorio: boolean
+    tipocx: integer(2-3000)
+    tipodeabordajecx: boolean
+}
+```
+
 ### Response
 
 #### SUCCESS
@@ -43,4 +77,4 @@ Un `409 Conflict` en caso de error, con un objeto JSON con los siguientes parame
 
 - `message` (string): Titulo del error.
 - `details` (string): Detalle del error.
-- `params_missing` (string): Ubicación del error.
+- `error` (string): Ubicación del error.
